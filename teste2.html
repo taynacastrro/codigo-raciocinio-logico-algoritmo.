@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salario do usuario.</title>
+</head>
+<body>
+    <script>
+        alert(`Escolha uma opção:
+               1. Novo salario
+               2. Ferias
+               3. Decimo Terceiro
+               4. Sair`);
+
+            let opcao = prompt("Digite uma opção do menu desejada: ")
+
+            if (opcao !== '1' && opcao !== '2' && opcao !== '3' && opcao != '4'){
+                alert("Opção invalida, tente novamente.")
+            }
+
+
+
+            if(opcao == 1){
+
+
+                let salario = Number(prompt("Digite o valor do seu salario: "))
+
+                if (isNaN(salario)){
+
+                    alert(`o valor inseirdo nao é um numero!`)
+
+                } else {
+
+
+                    if(salario <= 1200){
+
+                        let novoSalario = salario + (salario * 15 / 100)
+
+                        let salarioReal = novoSalario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                        alert(`O seu novo salario com 15% de aumento ficara ${salarioReal}`)
+
+                } else if(salario >= 2400){
+
+                    let novoSalario = salario + (salario * 10 / 100)
+
+                    let salarioReal = novoSalario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                    alert(`O seu novo salario com 10% de aumento ficara ${salarioReal}`)
+
+
+                } else if(salario >= 2400){
+
+                    let novoSalario = salario + (salario * 10 / 100)
+
+                    let salarioReal = novoSalario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                    alert(`O seu novo salario com 10% de aumento ficara ${salarioReal}`)
+
+
+                }else if(salario > 2400){
+
+                    let novoSalario = salario + (salario * 5 / 100)
+
+                    let salarioReal = novoSalario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                    alert(`O seu novo salario com 5% de aumento ficara ${salarioReal}`)
+
+
+                }else if(salario > 2400){
+
+                    let novoSalario = salario + (salario * 5 / 100)
+
+                    let salarioReal = novoSalario.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                    alert(`O seu novo salario com 5% de aumento ficara ${salarioReal}`)
+
+                }
+            }
+
+
+
+
+        }else if(opcao == 2){
+
+
+            let salario = Number(prompt("Digite o seu salario para determinar o valor das suas ferias: "))
+
+            if (isNaN(salario)){
+
+                alert("Numero invalido.")
+
+            } else{
+
+                let valorFerias = salario + (salario / 3)
+
+                let feriasReal = valorFerias.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                alert(`O seu salario com o valor de ferias foi de ${feriasReal}`)
+
+            }
+
+
+
+
+        } else if (opcao == 3){
+
+            let salario = Number(prompt("Digite o seu salario para determinar o decimo terceiro: "))
+
+            let mesesTrabalhado = Number(prompt("Digite a quantidade de meses trabalhado durante apenas um ano: "))
+
+            if(isNaN(salario)){
+
+                alert("Numero invalido.")
+
+            } else{
+
+                if (mesesTrabalhado <= 12){
+
+                    let decimoTerceiro = salario + (salario * mesesTrabalhado / 12)
+
+                    let decimoTerceiroReal = decimoTerceiro.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})
+
+                    alert (`O seu decimo terceiro sera de ${decimoTerceiroReal}`)
+
+                } else if(mesesTrabalhado > 12){
+
+                    alert("por favor, digite um numero valido.")
+
+
+                }
+            }
+
+
+
+    
+        } else if (opcao == 4){
+
+            alert("programa encerrado.")
+        }
+
+
+            /*
+
+            if(isNaN(salario)){
+
+                alert(`Numero invalido.`)
+
+            }else{
+
+                alert("programa encerrado.")
+
+            }
+
+        }
+
+*/
+
+    </script>
+    
+</body>
+</html>
